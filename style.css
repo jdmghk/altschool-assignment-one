@@ -1,41 +1,59 @@
 /* General Body Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Header Styling */
 header {
     background-color: #fff;
     padding: 20px;
-    border-bottom: 2px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo-and-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo {
+    height: 50px;
+    margin-right: 20px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 24px;
     color: #333;
-}
-
-nav {
-    margin-top: 10px;
+    margin: 0;
     text-align: center;
 }
 
+/* Navigation Styling */
+nav {
+    background-color: #fff; /* Updated background color */
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #ddd; /* Optional: for separation from content */
+}
+
 nav a {
+    color: #007bff; /* Text color */
     text-decoration: none;
-    color: #007bff;
     font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
     margin: 0 10px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    color: #0056b3;
-    border-bottom: 2px solid #007bff;
+    background-color: #f4f4f4; /* Hover background color */
+    color: #0056b3; /* Hover text color */
+    border-radius: 5px; /* Rounded corners */
 }
 
 /* Main Content Styling */
@@ -54,25 +72,140 @@ section {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 1.5em;
     color: #333;
     border-bottom: 2px solid #007bff;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
 
+h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
 p {
-    line-height: 1.6;
-    margin-bottom: 15px;
+    margin: 10px 0;
+    text-align: justify;
 }
 
 ul {
     list-style-type: disc;
+    margin: 10px 0;
     padding-left: 20px;
 }
 
 li {
     margin-bottom: 10px;
+}
+
+blockquote {
+    border-left: 5px solid #4CAF50;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+/* Form Styling */
+form {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+input[type="date"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    height: 38px;
+}
+
+input[type="submit"] {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4184ff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+}
+
+/* Image and Media Styling */
+picture {
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+video,
+audio {
+    display: block;
+    margin: 20px auto;
 }
 
 /* Scroll to Top Link */
@@ -92,4 +225,43 @@ li {
 .top-link:hover {
     background-color: #f4f4f4;
     color: #0056b3;
+}
+
+/* Address and Links */
+address {
+    font-style: normal;
+    margin: 20px 0;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        width: 95%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+        width: calc(100% - 18px);
+    }
 }
